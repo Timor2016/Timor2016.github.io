@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[弗洛伊德算法]]></title>
-    <url>%2F2019%2F05%2F07%2F%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7%E7%AE%97%E6%B3%95%2F</url>
+    <url>%2Fbolge%2F2019%2F05%2F07%2F%E5%BC%97%E6%B4%9B%E4%BC%8A%E5%BE%B7%E7%AE%97%E6%B3%95%2F</url>
     <content type="text"><![CDATA[无论别人说什么，正确的答案就是正确的答案。 弗洛伊德算法所解决问题:寻找带权图中多源点之间的最短路径如下 1.要实现Floyd算法，首先需要构建带权图的邻接矩阵：图中每个数字 代表顶点与顶点之间的直接距离 2.以A为中继点,计算各点之间的直接距离,如果当前计算距离小于原本距离则更新矩阵3.以AB为中继点,计算各点之间的直接距离,以此类推。4.直到所有顶点都可以作为中继顶点此时，矩阵中每一个元素，都对应着某顶点到另一个顶点的最短距离。java代码1234567891011121314151617181920212223242526272829303132333435public class Floyd &#123; final static int INF = Integer.MAX_VALUE; public static void floyd(int[][] matrix) &#123; for (int i = 0; i &lt; matrix.length; i++) &#123; for (int j = 0; j &lt; matrix.length; j++) &#123; for (int k = 0; k &lt; matrix.length; k++) &#123; if (matrix[j][i] == INF || matrix[i][k] == INF) &#123; continue; &#125; matrix[j][k] = Math.min(matrix[j][k], matrix[j][i] + matrix[i][k]); &#125; &#125; &#125; System.out.println("最短路径矩阵:"); for (int i = 0; i &lt; matrix.length; i++) &#123; for (int j = 0; j &lt; matrix.length; j++) &#123; System.out.printf("%3d", matrix[i][j]); &#125; System.out.printf(" \n"); &#125; &#125; public static void main(String[] args) &#123; int[][] matrix = &#123; &#123; 0, 5, 2, INF, INF, INF, INF &#125;, &#123; 5, 0, INF, 1, 6, INF, INF &#125;, &#123; 2, INF, 0, 6, INF, 8, INF &#125;, &#123; INF, 1, 6, 0, 1, 2, INF &#125;, &#123; INF, 6, INF, 1, 0, INF, 7 &#125;, &#123; INF, INF, 8, 2, INF, 0, 3 &#125;, &#123; INF, INF, INF, INF, 7, 3, 0 &#125; &#125;; floyd(matrix); &#125;&#125; 参考:漫画：图的 “多源” 最短路径]]></content>
       <categories>
         <category>算法</category>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <title><![CDATA[腾讯传]]></title>
-    <url>%2F2019%2F03%2F20%2F%E8%85%BE%E8%AE%AF%E4%BC%A0%2F</url>
+    <url>%2Fbolge%2F2019%2F03%2F20%2F%E8%85%BE%E8%AE%AF%E4%BC%A0%2F</url>
     <content type="text"><![CDATA[万物皆有裂痕，而那正是光照进来的地方！ 这本书是我除了课本以外认真读完并作笔录的第一本书。就将该篇文章作为自己博客的第一篇文章,自己也要努力成长(文笔欠缺,努力改进中)。 “万物皆有裂痕，而那正是光照进来的地方！” 吴晓波以这句作为腾讯传的开篇,讲述了一个从当年仅有30多平的办公室到今天拥有193米高的腾讯大厦的亚洲最高市值的企业的发展史。 以效仿美国在线ICQ”起家”的腾讯一直被被定义为抄袭公司。从最初的OICQ被迫改名QQ,到后来的QQ秀,腾讯微博,QQ的一系列游戏等等似乎都能从外界找到影子产品,甚至一度风投公司在投一个产品时都会问道”腾讯会不会做类似产品”,可以想想到当时腾讯一加独大的局面。这也导致了整个行业的恐惧,与对腾讯的不满。这种不满再2010年的3Q大战达到了最高点(记得当年的我是在高中,那时的我们每天都会凑钱去报摊买份看看进展,记得当年有传言360要出自己的聊天软件可以导入QQ好友,结果大失所望),这次口水大战的结果腾讯赢了法理,确输了人情。这次之后腾讯也改变了之前的作为一个模仿者的角色,开始拥抱开放。 中国的互联网本就是模仿+创新,所以小马哥的哪种”后发是最稳妥的方式”并不是我们指责其抄袭的理由。我感觉一个有责任,有担当的大企业应该是维持整个行业健康稳定的发展,而不是给整个行业带来恐惧,然而当一个企业在做大之后把控了互联网巨大的入口之后,依旧使用这一套,这就是抛弃了企业的对于该行业所负有的责任。 《腾讯传》我认为它并不完美,作者吴晓波一直在强调可以自由采访腾讯任何员工,似乎是以腾讯人视角看待腾讯。但是一个企业的发展必定离不开行业大环境,作者似乎忽视了同时期与腾讯有着竞争合作关系的创始人、企业的看法,仅仅是简单的借用了几句话,并没有深入的去了解剖析。]]></content>
       <categories>
         <category>阅读</category>
@@ -24,7 +24,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F03%2F20%2Fhello-world%2F</url>
+    <url>%2Fbolge%2F2019%2F03%2F20%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
